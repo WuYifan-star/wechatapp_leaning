@@ -1,0 +1,90 @@
+<!--pages/index1/index1.wxml   约定由于配置-->
+<text>pages/index1/index1.wxml</text>
+<image src="https://avatars2.githubusercontent.com/u/56722065?s=400&v=4"></image>
+<image src="/image/56722065.png"></image>
+<audio id="" src="" loop="false" controls="false" poster="" name="未知音频" author="未知作者" 
+    binderror="" bindplay="" bindpause="" bindtimeupdate="" bindended="">
+    
+</audio>
+<video class="" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"  autoplay="{{false}}" loop="false" muted="false" direction="0" >
+    
+</video>
+<icon class="" type="success" size="93" color="">
+    
+</icon>
+<icon class="" type="success_no_circle" size="93" color="">
+    
+</icon>
+<icon class="" type="info" size="93" color="">
+    
+</icon>
+<icon class="" type="warn" size="93" color="">
+    
+</icon>
+<icon class="" type="waiting" size="93" color="">
+
+    
+</icon>
+<icon class="" type="cancel" size="93" color="">
+    
+</icon>
+<icon class="" type="download" size="93" color="">
+    
+</icon>
+<icon class="" type="search" size="93" color="">
+    
+</icon>
+<icon class="" type="clear" size="93" color="">
+    
+</icon>
+<text class="" selectable="false" space="false" decode="true">
+    &lt;jljlkjlkjlkjlk&gt;
+</text>
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>flex-direction: row\n横向布局</text>
+      </view>
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="display:flex;flex-direction:row;">
+          <view class="flex-item demo-text-1">1</view>
+          <view class="flex-item demo-text-2">2</view>
+          <view class="flex-item demo-text-3">3</view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>flex-direction: column\n纵向布局</text>
+      </view>
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V demo-text-1"></view>
+        <view class="flex-item flex-item-V demo-text-2"></view>
+        <view class="flex-item flex-item-V demo-text-3"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<swiper class="" indicator-dots="false" indicator-color="gray" indicator-active-color="red" autoplay="true" 
+    current="0" current-item-id="" interval="5000" duration="1000" circular="false" vertical="{{false}}" 
+previous-margin="false" next-margin="0px" display-multiple-items="1" skip-hidden-item-layout="false" bindchange="" bindanimationfinish="">
+    <swiper-item class="" item-id="">
+        <image class="" src="/image/1.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        </image>    
+    </swiper-item>
+    <swiper-item class="" item-id="">
+        <image class="" src="/image/2.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">   
+        </image>    
+    </swiper-item>
+    <swiper-item class="" item-id="">
+        <image class="" src="/image/3.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">   
+        </image>    
+    </swiper-item>
+    <swiper-item class="" item-id="">
+        <image class="" src="/image/4.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        </image>    
+    </swiper-item>
+</swiper>
+
