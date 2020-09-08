@@ -1,0 +1,30 @@
+<!--pages/todolist/todolist.wxml-->
+<view class="container">
+    <view bindtap="onaddtodo"  class="addtodo">
+        +新增代办
+    </view>
+
+    <!-- <block wx:for="{{[1, 2, 3]}}">
+        <view> {{index}}: </view>
+        <view> {{item}} </view>
+    </block> -->
+
+    <view class="todolist" wx:for="{{todolist}}">
+        <view id="{{index}}" bindtap="onchangestatus" class="item">
+            <!-- 三目运算 -->
+            <icon type="{{item.status==true?'success':'circle'}}" size="23" color="gray"></icon>
+            <text class="{{item.status==true?'isok':'circle'}}">{{item.content}}</text>
+        </view>    
+    </view>
+
+    <!-- <view class="todolist">
+        <view class="item">
+            <icon type="success" size="23" color="gray"></icon>
+            <text class="isok">完成蚂蚁代办小程序</text>
+        </view>
+        <view class="item">
+            <icon type="circle" size="23" color="gray"></icon>
+            <text class="content">下课后去约会或者健身</text>
+        </view>
+    </view> -->
+</view>

@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/todolist/todolist",
+    "pages/addtodo/addtodo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "蚂蚁代办",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

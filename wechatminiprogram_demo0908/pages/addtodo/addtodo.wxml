@@ -1,0 +1,5 @@
+<!--pages/addtodo/addtodo.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <input bindinput="oncontentchange" placeholder="请输入一个代办" focus="true" type="true" class="content"></input>
+    <button bindtap="onsubmitcontent" type="default">提交</button>
+</view>

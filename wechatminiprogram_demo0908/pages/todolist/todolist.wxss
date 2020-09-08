@@ -1,0 +1,45 @@
+/* pages/todolist/todolist.wxss */
+.container{
+  flex-direction: column;
+  padding: 30rpx;
+  font-family: "微软雅黑";
+}
+.addtodo{
+  border:2rpx dashed #b2b2b2;
+  border-radius: 10rpx;
+  color:#b2b2b2;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: block;
+
+}
+.todolist{
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #fff;
+ 
+}
+.item{
+  height: 50rpx;
+  line-height: 50rpx;
+  padding:30rpx;
+  border-bottom: 1rpx solid #ccc;
+  color:#404040;
+  display: block;
+
+}
+.item icon{
+  height: 50rpx;
+  line-height:50rpx;
+}
+.item text{
+  padding-left:10rpx;
+  line-height: 50rpx;
+}
+
+.item .isok{
+  color:#ccc;
+  text-decoration: line-through;
+}
