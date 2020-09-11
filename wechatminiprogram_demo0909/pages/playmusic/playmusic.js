@@ -9,7 +9,9 @@ Page({
     title:[],
     nowindex:0,
     count:0,
-    isall:''
+    isall:'',
+    tipc:0,
+    tipw:0
   },
 
   init:function(){
@@ -100,6 +102,9 @@ Page({
 
   },
   getitem:function (e) {
+    this.setData({
+      tipw:this.data.tipw + 1
+    })
     var word=this.data.songs[this.data.nowindex].keyword[e.target.id];
     console.log("当前点击的关键字"+word);
 
@@ -109,8 +114,8 @@ Page({
         break;
       }
     }
-
-    if (i == this.data.title.length - 1)  {
+    console.log(this.data.tipw+"+"+this.data.tipc)
+    if (this.data.tipw-this.data.tipc == this.data.title.length)  {
       this.setData({
         isall:"all"
       })
@@ -134,17 +139,41 @@ Page({
           confirmColor: '#3CC51F',
           success: (res) => {
             if(res.confirm){
-              this.setData({
+              if(this.data.nowindex == this.data.songs.length-1){
+                this.setData({
+                  song:[],
+                  title:[],
+                  nowindex:0,
+                  count:0,
+                  isall:'',
+                  tipc:0,
+                  tipw:0
+                })
+                wx.redirectTo({
+                  url: '/pages/winpage/winpage',
+                })
+              }
+              else{
+                this.setData({
                 nowindex:this.data.nowindex + 1,
-                isall:''
+                isall:'',
+                title:[],
+                tipc:0,
+                tipw:0
               })
               this.init()
+              }
+              
             }
           },
         });
       }
       else{
         console.log("不正确")
+        this.setData({
+          isall:''
+        })
+
         wx.showModal({
           title: '提示',
           content: '很遗憾，答题错误',
@@ -166,6 +195,9 @@ Page({
 
  
   cleartxt:function(event){
+    this.setData({
+      tipc:this.data.tipc + 1
+    })
     this.data.title[event.target.id]='';
     this.setData({
       title:this.data.title

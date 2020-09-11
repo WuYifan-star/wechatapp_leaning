@@ -1,2 +1,3 @@
 <!--pages/winpage/winpage.wxml-->
-<text>pages/winpage/winpage.wxml</text>
+<image class="" src="/images/success.jpg"></image>
+
