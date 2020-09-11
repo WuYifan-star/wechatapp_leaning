@@ -22,14 +22,42 @@
  
 }
 .item{
-  height: 50rpx;
-  line-height: 50rpx;
-  padding:30rpx;
-  border-bottom: 1rpx solid #ccc;
-  color:#404040;
-  display: block;
+  font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom:1px solid #ccc;
+	width: 100%;
+	overflow: hidden
 
 }
+
+.content {
+	width: 100%;
+	padding: 10px;
+	line-height: 22px;
+	margin-right:0;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transform: translateX(90px);
+	transform: translateX(90px);
+	margin-left: -90px
+}
+
+.del {
+	background-color: orangered;
+	width: 90px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	-webkit-transform: translateX(90px);
+	transform: translateX(90px);
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+
 .item icon{
   height: 50rpx;
   line-height:50rpx;
@@ -42,4 +70,10 @@
 .item .isok{
   color:#ccc;
   text-decoration: line-through;
+}
+
+.touch-move-active .content,
+.touch-move-active .del {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
 }

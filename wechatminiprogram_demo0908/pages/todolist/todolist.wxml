@@ -10,10 +10,11 @@
     </block> -->
 
     <view class="todolist" wx:for="{{todolist}}">
-        <view id="{{index}}" bindtap="onchangestatus" class="item">
+        <view id="{{index}}" bindtap="onchangestatus" class="item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" >
             <!-- 三目运算 -->
-            <icon type="{{item.status==true?'success':'circle'}}" size="23" color="gray"></icon>
-            <text class="{{item.status==true?'isok':'circle'}}">{{item.content}}</text>
+            <icon type="{{item.status==true?'success':'circle'}}" size="23" color="gray" class="content"></icon>
+            <text class="content {{item.status==true?'isok':'circle'}}">{{item.content}}</text>
+            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
         </view>    
     </view>
 
