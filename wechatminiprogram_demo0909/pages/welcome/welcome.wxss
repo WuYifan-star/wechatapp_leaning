@@ -1,0 +1,15 @@
+/* pages/default/default.wxss */
+.img{
+
+  width:100%;
+  /* rpx（responsive pixel）可以根据屏幕宽度进行自适应调整 */
+  height:1200rpx; 
+  /* Flex是Flexible Box的缩写，意为"弹性布局" */
+  display: flex
+}
+.btn{
+  position: absolute;
+  top:85%;
+  left: 35%;
+
+}

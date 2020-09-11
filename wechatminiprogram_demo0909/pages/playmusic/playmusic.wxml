@@ -1,0 +1,35 @@
+<!--pages/playmusic/playmusic.wxml-->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <audio src="{{songs[nowindex].src}}" controls></audio>
+    <!-- 显示歌曲名称长度 -->
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        <input id="{{index}}" bindtap="cleartxt" wx:for="{{count}}" type="text" class="name" disabled="true" value="{{title[index]}}"/>
+        <!-- <input type="text" class="name" disabled="true"/>
+        <input type="text" class="name" disabled="true"/>
+        <input type="text" class="name" disabled="true"/> -->
+    </view>
+<!-- 选名字 -->
+    <view class="content" hover-class="none" hover-stop-propagation="false">
+        <view id="{{index}}" bindtap="getitem" wx:for="{{songs[nowindex].keyword}}" class="btn">{{item}}</view>
+        <!-- <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view>
+        <view class="btn">你</view> -->
+    </view>
+<!-- 转发 -->
+    <view class="footer" hover-class="none" hover-stop-propagation="false">
+        <text class="tip">挺好玩的，试一试</text>
+        <button class="sos" open-type="share">邀请</button>
+    </view>
+</view>

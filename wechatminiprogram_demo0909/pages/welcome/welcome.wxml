@@ -1,0 +1,3 @@
+<!--pages/welcome/welcome.wxml-->
+<image class="" src="/images/welcome.jpg"></image>
+<button bindtap="gotomusic">进入游戏</button>
