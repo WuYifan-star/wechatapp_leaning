@@ -1,6 +1,6 @@
 <!--pages/playmusic/playmusic.wxml-->
 <view class="container" hover-class="none" hover-stop-propagation="false">
-    <audio src="{{songs[nowindex].src}}" controls></audio>
+    <audio bindtap="controlmusic" src="{{songs[nowindex].src}}" id="audio" controls></audio>
     <!-- 显示歌曲名称长度 -->
     <view class="" hover-class="none" hover-stop-propagation="false">
         <input id="{{index}}" bindtap="cleartxt" wx:for="{{count}}" type="text" class="name" disabled="true" value="{{title[index]}}"/>

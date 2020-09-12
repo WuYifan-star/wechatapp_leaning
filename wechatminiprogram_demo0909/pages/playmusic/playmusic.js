@@ -11,12 +11,16 @@ Page({
     count:0,
     isall:'',
     tipc:0,
-    tipw:0
+    tipw:0,
+    auto:true
   },
 
   init:function(){
-
+    wx.setNavigationBarTitle({
+      title:'听歌识曲-第'+(this.data.nowindex+1) + '首',
+  })
     wx.request({
+      
       url: 'https://www.fastmock.site/mock/c7f2c1eccbe480e7268c74d281ba74d2/_listenmusic/getsongs',
       success:res=>{
         console.log("模拟数据"+res.data)
@@ -51,12 +55,15 @@ Page({
         })
       }
     })
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.audioCtx=wx.createAudioContext('audio');
+    this.audioCtx.play();
 
   },
 
@@ -192,8 +199,7 @@ Page({
     }
 
   },
-
- 
+  
   cleartxt:function(event){
     this.setData({
       tipc:this.data.tipc + 1
@@ -202,5 +208,16 @@ Page({
     this.setData({
       title:this.data.title
     })
+  },
+  controlmusic:function(){
+    this.setData({
+      auto:!this.data.auto
+    })
+    if(this.data.auto){
+      this.audioCtx.pause()
+    }
+    else{
+      this.audioCtx.play()
+    }
   }
 })

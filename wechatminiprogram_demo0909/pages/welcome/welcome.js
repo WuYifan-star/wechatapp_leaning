@@ -16,6 +16,9 @@ Page({
       key: 'isshow',
       data: true,
     })
+    wx.setNavigationBarTitle({
+      title:"听歌识曲",
+  })
   },
 
   /**
